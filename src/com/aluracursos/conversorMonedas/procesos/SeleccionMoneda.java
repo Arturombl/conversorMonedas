@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SeleccionMoneda {
-
-    List <String> currencyTarget = new ArrayList<String>();
-
-    String baseCode;
-    String tarjetCode;
+    private String baseCode;
+    private String tarjetCode;
 
     public ArrayList listaCodigos (){
         List<String> currencyCode = new ArrayList<>();
@@ -24,7 +21,7 @@ public class SeleccionMoneda {
     }
 
 
-    public String seleccionarBaseCode(ArrayList list, int opcion) {
+    public String seleccionarBaseCode(ArrayList<String> list, int opcion) {
 
         for (int i=0; i<= list.size(); i++) {
             if ((opcion - 1) == i) {
