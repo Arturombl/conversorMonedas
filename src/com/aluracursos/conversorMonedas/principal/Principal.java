@@ -8,7 +8,7 @@ import java.util.*;
 public class Principal {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        ArrayList<String> currencyCode = new ArrayList<>();
+        ArrayList<String> currencyCode = new ArrayList<String>();
         ArrayList<String> currencyTarget = new ArrayList<>();
         HashMap<String, String> currency;
 
