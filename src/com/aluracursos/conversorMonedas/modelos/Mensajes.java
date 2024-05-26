@@ -45,7 +45,7 @@ public class Mensajes {
         System.out.println("************************************");
         int i = 1;
         for (String moneda : list ){
-            if (moneda != code){
+            if (!Objects.equals(moneda, code)){
                 System.out.println(i + " => " + map.get(moneda));
                 currencyTarget.add(moneda);
                 i++;
@@ -59,9 +59,5 @@ public class Mensajes {
         System.out.println("Se realizo la conversion de la moneda: " + map.get(baseCode) + " a moneda: " + map.get(targetCode));
         System.out.println("por un monto: " + monto);
         System.out.println("dando como resultado: " + conversionFinal + " moneda " + map.get(targetCode));
-    }
-
-    public void imprimirHistorial(){
-
     }
 }

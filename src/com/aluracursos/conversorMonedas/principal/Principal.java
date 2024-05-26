@@ -61,7 +61,7 @@ public class Principal {
                         System.out.println("\n Ingresa el monto a convertir: ");
                         monto = entrada.nextDouble();
 
-                        momtoConversion = conversion.conversionMoneda(currency, base_Code, target_code, monto);
+                        momtoConversion = conversion.conversionMoneda(base_Code, target_code, monto);
                         menu.mensajeConversion(currency, base_Code, target_code, monto, momtoConversion);
                         historial.historial(nombre, base_Code, target_code, monto, momtoConversion, currency);
 

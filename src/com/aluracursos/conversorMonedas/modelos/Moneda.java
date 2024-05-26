@@ -22,8 +22,4 @@ public record Moneda(String base_code,
         return result;
     }
 
-    double conversorMoneda (double baseCode, double tarjeCode){
-        return baseCode * tarjeCode;
-    }
-
 }
