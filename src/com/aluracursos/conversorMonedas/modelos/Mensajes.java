@@ -32,7 +32,8 @@ public class Mensajes {
                 6=> Colombian Peso
                 7=> South Korean Won
                 8=> Chinese Renminbi
-                9=> Salir.
+                9=> Revisar Historial
+                10=> Salir
                 
                 ************************************
                 """;
@@ -54,5 +55,13 @@ public class Mensajes {
         System.out.println("************************************");
         return currencyTarget;
     }
+    public void mensajeConversion(HashMap<String, String> map, String baseCode, String targetCode, double monto, double conversionFinal){
+        System.out.println("Se realizo la conversion de la moneda: " + map.get(baseCode) + " a moneda: " + map.get(targetCode));
+        System.out.println("por un monto: " + monto);
+        System.out.println("dando como resultado: " + conversionFinal + " moneda " + map.get(targetCode));
+    }
 
+    public void imprimirHistorial(){
+
+    }
 }
