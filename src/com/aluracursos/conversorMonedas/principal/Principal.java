@@ -46,7 +46,7 @@ public class Principal {
                         System.out.println("Programa Finalizado");
                         validar = false;
                     } else if (opcion == 9){
-                        System.out.println("En Mantenimiento.............");
+                        historial.imprimirHistorial(nombre);
                     } else if (opcion < 9) {
                         base_Code = seleccion.seleccionarBaseCode(currencyCode , opcion);
 

@@ -14,6 +14,8 @@ public class HistorialConversion {
             .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
             .setPrettyPrinting()
             .create();
+    File archivo;
+
 
     public void historial (String nombre, String base, String targe, double monto, double montoconversion, HashMap<String, String> mapa){
         String monedaBase = mapa.get(base);
@@ -23,7 +25,7 @@ public class HistorialConversion {
 
 
         try {
-            File archivo = new File(registro.getNombreUsuario() + ".json");
+            archivo = new File(registro.getNombreUsuario() + ".txt");
             if (!archivo.exists()) {
                 archivo.createNewFile();
             }
@@ -35,5 +37,28 @@ public class HistorialConversion {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public void imprimirHistorial(String usuario){
+        try {
+            String mensaje;
+            File archivo = new File(usuario + ".txt");
+            if (archivo.exists()){
+                FileReader lector = new FileReader(archivo);
+                BufferedReader lectura = new BufferedReader(lector);
+
+                mensaje = lectura.readLine();
+
+                while (mensaje != null){
+                    System.out.println(mensaje);
+                    mensaje = lectura.readLine();
+                }
+
+            }else {
+                System.out.println("Lo sentimos no tenemos historial del usuario: " + usuario);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
